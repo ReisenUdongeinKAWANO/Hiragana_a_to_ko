@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" async></script>
+  <title>ひらがな</title>
+</head>
+<body>
+  <h1 class="page-title">ひらがな</h1>
+  <div class="overlay-text visible">
+    タップしてスタート
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    ざんねん...
+    <span class="overlay-text-small">もういちど</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    やったね！
+    <span class="overlay-text-small">もういちど</span>
+  </div>
+
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Time <span id="time-remaining">150</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+<style type="text/css">
+
+img.card-value {
+width: 200px;
+height: 200px;
+}
+
+</style>
+
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド1.png">
+        <audio class="audio-value" src= "Assets/Audio/a.mp3"></audio>
+
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド1.png">
+        <audio class = "audio-value" src = "Assets/Audio/a.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド2.png">
+        <audio class = "audio-value" src = "Assets/Audio/i.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド2.png">
+        <audio class = "audio-value" src = "Assets/Audio/i.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド3.png">
+        <audio class = "audio-value" src = "Assets/Audio/u.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド3.png">
+        <audio class = "audio-value" src = "Assets/Audio/u.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド4.png">
+        <audio class = "audio-value" src = "Assets/Audio/e.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド4.png">
+        <audio class = "audio-value" src = "Assets/Audio/e.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド5.png">
+        <audio class = "audio-value" src = "Assets/Audio/o.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド5.png">
+        <audio class = "audio-value" src = "Assets/Audio/o.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド6.png">
+        <audio class = "audio-value" src = "Assets/Audio/ka.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド6.png">
+        <audio class = "audio-value" src = "Assets/Audio/ka.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド7.png">
+        <audio class = "audio-value" src = "Assets/Audio/ki.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド7.png">
+        <audio class = "audio-value" src = "Assets/Audio/ki.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド8.png">
+        <audio class = "audio-value" src = "Assets/Audio/ku.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド8.png">
+        <audio class = "audio-value" src = "Assets/Audio/ku.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド9.png">
+        <audio class = "audio-value" src = "Assets/Audio/ke.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド9.png">
+        <audio class = "audio-value" src = "Assets/Audio/ke.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド10.png">
+        <audio class = "audio-value" src = "Assets/Audio/ko.mp3"></audio>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/Cobweb.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/Cobweb.png">
+        <img class="spider" src="Assets/Images/Spider.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/CobwebGrey.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/CobwebGrey.png">
+        <img class="card-value" src="Assets/Images/スライド10.png">
+        <audio class = "audio-value" src = "Assets/Audio/ko.mp3"></audio>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
