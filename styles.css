@@ -5,7 +5,7 @@
 }
 
 html {
-  min-height: 1000px;
+  min-height: 100vh;
   cursor: url(Assets/Cursors/Ghost.cur), auto;
   font-family: Lunacy;
 }
@@ -31,7 +31,7 @@ body {
 
 .game-info {
   color: #000000;
-  font-size: 4em;
+  font-size: 40px;
 }
 
 .game-container {
@@ -40,7 +40,7 @@ body {
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   justify-content: center;
-  perspective: 500px;
+  perspective: 300px;
 }
 
 .card {
@@ -192,7 +192,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 200px) {
   .game-container {
     grid-template-columns: repeat(2, auto)
   }
